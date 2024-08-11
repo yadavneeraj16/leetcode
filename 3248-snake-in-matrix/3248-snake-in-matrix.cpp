@@ -1,17 +1,22 @@
 class Solution {
 public:
-    int finalPositionOfSnake(int n, vector<string>& commands) 
+    int finalPositionOfSnake(int n, vector<string>& c) 
     {
-               int i = 0, j = 0;
-        for(auto com:commands)
-        {
-            if(com == "RIGHT") j++;
-            else if(com == "DOWN") i++;
-            else if(com == "LEFT") j--;
-            else if(com == "UP") i--;
+        int x=0,y=0;
+        for(int i=0;i<c.size();i++){
+            if(c[i]=="UP"){
+                x--;
+            }
+            if(c[i]=="DOWN"){
+                x++;
+            }
+            if(c[i]=="LEFT"){
+                y--;
+            }
+            if(c[i]=="RIGHT"){
+                y++;
+            }
         }
-
-        
-        return(i*n)+j;
+        return(x*n)+y;
     }
 };
