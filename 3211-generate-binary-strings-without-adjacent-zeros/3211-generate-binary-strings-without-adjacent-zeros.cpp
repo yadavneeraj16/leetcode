@@ -13,7 +13,7 @@ void solve(int n,string s, vector<string>&ans){
     vector<string> validStrings(int n) {
         vector<string>ans;
         string s="";
-        solve(n,"",ans);
+        solve(n,s,ans);
         return ans;
     }
 };
